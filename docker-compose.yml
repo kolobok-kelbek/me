@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+
+    me:
+        build: docker
+        container_name: me-frontend
+        tty: true
+        user: 1000:1000
+        ports:
+            - 3000:3000
+        volumes:
+            - ./:/app
+        networks:
+            - me-network
+
+networks:
+    me-network:
+        name: me-network
