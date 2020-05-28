@@ -1,0 +1,87 @@
+.Menu {
+    display: flex;
+    width: 100vw;
+    list-style: none;
+    margin: 0;
+    padding: 100px 0 0 0;
+    justify-content: space-evenly;
+    font-size: 3rem;
+}
+
+.Menu li {
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+
+.Menu li span {
+    flex: 0 0 auto;
+}
+
+.Menu li .after {
+    flex: 4 0 auto;
+}
+
+.Menu li .before {
+    flex: 4 0 auto;
+}
+
+.Menu li .after,
+.Menu li .before {
+    border-bottom: 4px solid #5cfd6a;
+}
+
+.Menu li:hover {
+    border-bottom: none;
+}
+
+.Menu li span {
+    border-bottom: 4px solid #5cfd6a;
+    box-sizing: border-box;
+}
+
+.Menu li:hover span {
+    border-bottom: none;
+}
+
+.Menu li span::before {
+    display: inline-block;
+    content: "";
+    width: 0.5rem;
+    height: 2rem;
+    margin: 0 0.5rem 0 0;
+    transform: translateY(1rem);
+    box-sizing: border-box;
+}
+
+.Menu li span::after {
+    display: inline-block;
+    content: "";
+    width: 0.5rem;
+    height: 2rem;
+    margin: 0 0 0 0.5rem;
+    transform: translateY(1rem);
+    box-sizing: border-box;
+}
+
+.Menu li:hover span::before {
+    display: inline-block;
+    content: "";
+    border-top: 2px solid #5cfd6a;
+    border-left: 4px solid #5cfd6a;
+    width: 0.5rem;
+    height: 2rem;
+    margin: 0 0.5rem 0 0;
+    transform: translateY(1rem);
+}
+
+.Menu li:hover span::after {
+    display: inline-block;
+    content: "";
+    border-top: 2px solid #5cfd6a;
+    border-right: 4px solid #5cfd6a;
+    width: 0.5rem;
+    height: 2rem;
+    margin: 0 0 0 0.5rem;
+    transform: translateY(1rem);
+}

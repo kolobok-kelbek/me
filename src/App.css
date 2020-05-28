@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   background: linear-gradient(
     to bottom,
     #376345,
@@ -10,5 +9,7 @@
   background-size: 100% 5px;
   min-height: 100vh;
   box-shadow: inset 0px 0px 100px 100px rgba(0,0,0,0.8);
+  color: #5cfd6a;
+  text-shadow: 1px 1px 2px black, 0 0 1em #336131;
 }
 
