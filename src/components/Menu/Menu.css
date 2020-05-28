@@ -10,38 +10,46 @@
 
 .Menu li {
     width: 100%;
+}
+
+.Menu li a {
+    width: 100%;
+    height: 100%;
     text-align: center;
     display: flex;
     cursor: pointer;
+    color: inherit;
+    text-decoration: inherit;
+    box-sizing: border-box;
 }
 
-.Menu li span {
+.Menu li a span {
     flex: 0 0 auto;
 }
 
-.Menu li .after {
+.Menu li a .after {
     flex: 4 0 auto;
 }
 
-.Menu li .before {
+.Menu li a .before {
     flex: 4 0 auto;
 }
 
-.Menu li .after,
-.Menu li .before {
+.Menu li a .after,
+.Menu li a .before {
     border-bottom: 4px solid #5cfd6a;
 }
 
-.Menu li span {
+.Menu li a span {
     border-bottom: 4px solid #5cfd6a;
     box-sizing: border-box;
 }
 
-.Menu li.current span {
+.Menu li a.current span {
     border-bottom: none;
 }
 
-.Menu li span::before {
+.Menu li a span::before {
     display: inline-block;
     content: "";
     width: 0.5rem;
@@ -51,7 +59,7 @@
     box-sizing: border-box;
 }
 
-.Menu li span::after {
+.Menu li a span::after {
     display: inline-block;
     content: "";
     width: 0.5rem;
@@ -61,11 +69,11 @@
     box-sizing: border-box;
 }
 
-.Menu li.current {
+.Menu li a.current {
     cursor: default;
 }
 
-.Menu li.current span::before {
+.Menu li a.current span::before {
     display: inline-block;
     content: "";
     border-top: 2px solid #5cfd6a;
@@ -76,7 +84,7 @@
     transform: translateY(1rem);
 }
 
-.Menu li.current span::after {
+.Menu li a.current span::after {
     display: inline-block;
     content: "";
     border-top: 2px solid #5cfd6a;
