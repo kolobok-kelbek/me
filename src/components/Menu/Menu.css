@@ -12,6 +12,7 @@
     width: 100%;
     text-align: center;
     display: flex;
+    cursor: pointer;
 }
 
 .Menu li span {
@@ -31,16 +32,12 @@
     border-bottom: 4px solid #5cfd6a;
 }
 
-.Menu li:hover {
-    border-bottom: none;
-}
-
 .Menu li span {
     border-bottom: 4px solid #5cfd6a;
     box-sizing: border-box;
 }
 
-.Menu li:hover span {
+.Menu li.current span {
     border-bottom: none;
 }
 
@@ -64,7 +61,11 @@
     box-sizing: border-box;
 }
 
-.Menu li:hover span::before {
+.Menu li.current {
+    cursor: default;
+}
+
+.Menu li.current span::before {
     display: inline-block;
     content: "";
     border-top: 2px solid #5cfd6a;
@@ -75,7 +76,7 @@
     transform: translateY(1rem);
 }
 
-.Menu li:hover span::after {
+.Menu li.current span::after {
     display: inline-block;
     content: "";
     border-top: 2px solid #5cfd6a;

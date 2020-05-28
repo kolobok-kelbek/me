@@ -1,36 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Menu.css';
 
-function Menu() {
+function Item(props) {
   return (
-    <menu className="Menu">
-        <li>
-          <div className="after"></div>
-          <span>STAT</span>
-          <div className="before"></div>
-        </li>
-        <li>
-          <div className="after"></div>
-          <span>INV</span>
-          <div className="before"></div>
-        </li>
-        <li>
-          <div className="after"></div>
-          <span>DATA</span>
-          <div className="before"></div>
-        </li>
-        <li>
-          <div className="after"></div>
-          <span>MAP</span>
-          <div className="before"></div>
-        </li>
-        <li>
-          <div className="after"></div>
-          <span>RADIO</span>
-          <div className="before"></div>
-        </li>
-    </menu>
+    <li className={props.current === props.index ? "current" : ""} onClick={() => props.setCurrent(props.index)}>
+      <div className="after"></div>
+      <span>{props.name}</span>
+      <div className="before"></div>
+    </li>
   );
 }
 
-export default Menu;
+export default function Menu() {
+  const [current, setCurrent] = useState(0);
+
+  const items = ["INF0", "SKILLS", "HOBBIES", "fewfwq"];
+
+  const rows = [];
+  items.forEach((item, index) => rows.push(<Item name={item} current={current} index={index} setCurrent={setCurrent}/>));
+
+  return (
+    <menu className="Menu">
+        {rows}
+    </menu>
+  );
+}
