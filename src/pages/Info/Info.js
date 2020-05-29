@@ -18,7 +18,8 @@ function Info() {
     "Date of Burth": "11.02.1995",
     "Location": "Russia, St. Petersburg",
     "Core skill": "Backend development",
-    "Main hobby": "Programming"
+    "Main hobby": "Programming",
+    "Github": "https://github.com/kolobok-kelbek"
   };
 
   const rows = [];

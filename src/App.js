@@ -8,7 +8,7 @@ import {
 import Menu from './components/Menu/Menu';
 import Info from './pages/Info/Info';
 import Skills from './pages/Skills/Skills';
-import Hobbies from './pages/Hobbies/Hobbies'
+import Contacts from './pages/Contacts/Contacts'
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Info}/>
             <Route exact path="/skills" component={Skills}/>
-            <Route exact path="/hobbies" component={Hobbies}/>
+            <Route exact path="/contacts" component={Contacts}/>
           </Switch>
         </div>
       </Router>

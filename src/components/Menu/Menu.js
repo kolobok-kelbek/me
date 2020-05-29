@@ -17,7 +17,7 @@ function Item(props) {
 export default function Menu() {
   let location = useLocation();
 
-  const items = {"INF0": "/", "SKILLS": "/skills", "HOBBIES": "/hobbies"};
+  const items = {"INF0": "/", "SKILLS": "/skills", "CONTACTS": "/contacts"};
 
   let currentFromUrl = 0;
   let count = 0;
