@@ -1,4 +1,5 @@
 import React from 'react';
+import Typewriter from 'typewriter-effect';
 import './Info.css';
 
 function Row(props) {
@@ -34,9 +35,14 @@ function Info() {
           </tbody>
         </table>
         
-        <p className="description">
-          Interested in backend development, programming languages, web architectures. 
-          Like new technologies, but sympathetic to Legacy. In free time, develop one of pet projects or learn something new.
+        <p>
+          <Typewriter className="description"
+            onInit={(typewriter) => {
+              typewriter.typeString('Interested in backend development, programming languages, web architectures. ' +
+              'Like new technologies, but sympathetic to Legacy. In free time, develop one of pet projects or learn something new.')
+                .start();
+            }}
+          />
         </p>
       </div>
       <div className="avatar-block">
