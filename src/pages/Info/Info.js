@@ -38,6 +38,9 @@ function Info() {
         
         <p>
           <Typewriter className="description"
+            options={{
+              delay: 40
+            }}
             onInit={(typewriter) => {
               typewriter.typeString('Interested in backend development, programming languages, web architectures. ' +
               'Like new technologies, but sympathetic to Legacy. In free time, develop one of pet projects or learn something new.')
