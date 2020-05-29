@@ -23,6 +23,7 @@ function App() {
     <div className={hard ? "App old-effect": "App"}>
       <div class="screen">
         <div className="old-effect-switch" onClick={() => setHard(!hard)}>OLD EFFECT [{hard ? "X": " "}]</div>
+        <div className="version">v1.0.0</div>
         <Router history={history}>
           <Menu/>
           <div className="content">

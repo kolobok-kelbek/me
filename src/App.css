@@ -222,3 +222,10 @@
   right: 30px;
   top: 30px;
 }
+
+.version {
+  font-size: 0.75rem;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
