@@ -1,0 +1,33 @@
+.box {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.level {
+    width: 100%;
+    height: 1rem;
+    border-top: 2px solid #5cfd6a;
+    border-right: 2px solid #5cfd6a;
+}
+
+.level-right-border {
+    width: 0;
+    height: 0;
+    border-top: calc(1rem + 4px) solid #5cfd6a;
+    border-left: 0.5rem solid transparent;
+}
+
+.value {
+    width: calc(100% - 4px);
+    background: linear-gradient(90deg, #5cfd6a 0%, #5cfd6a 70%, #192b1d 100%);;
+    margin: 2px;
+    height: calc(100% - 2px);
+}
+
+.points {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: calc(1rem - 4px);
+}

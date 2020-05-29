@@ -1,0 +1,42 @@
+.Note {
+    margin-top: 1.15rem;
+    box-sizing: border-box;
+    border-bottom: 2px solid #5cfd6a;
+    border-left: 2px solid #5cfd6a;
+    border-right: 2px solid #5cfd6a;
+}
+
+.note-title-wrapper {
+    height: 0.1rem;
+    position: relative;
+}
+
+.note-title {
+    font-size: 1.5rem;
+    position: absolute;
+    top: -1.15rem;
+    display: flex;
+    width: 100%;
+}
+
+.note-title-text {
+    padding: 0 15px;
+}
+
+.note-title div {
+    border-bottom: 2px solid #5cfd6a;
+    height: 1.15rem;
+}
+
+.note-title .note-title-after {
+    flex: 1;
+}
+
+.note-title .note-title-before {
+    flex: 14;
+}
+
+.note-content {
+    font-size: 1rem;
+    margin: 10px;
+}

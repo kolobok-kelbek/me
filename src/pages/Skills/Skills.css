@@ -1,0 +1,12 @@
+.SkillsPage {
+    font-size: 2rem;
+}
+
+.SkillsPage table {
+    width: 100%;
+    margin: 0px;
+}
+
+.skill-page-note {
+    margin-top: 50px;
+}
