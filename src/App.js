@@ -28,9 +28,9 @@ function App() {
           <Menu/>
           <div className="content">
             <Switch>
-              <Route exact path="/" component={Info}/>
-              <Route exact path="/skills" component={Skills}/>
-              <Route exact path="/contacts" component={Contacts}/>
+              <Route exact path="/me" component={Info}/>
+              <Route exact path="/me/skills" component={Skills}/>
+              <Route exact path="/me/contacts" component={Contacts}/>
             </Switch>
           </div>
         </Router>
