@@ -10,7 +10,8 @@ import './App.css';
 import Menu from './components/Menu/Menu';
 import Info from './pages/Info/Info';
 import Skills from './pages/Skills/Skills';
-import Contacts from './pages/Contacts/Contacts'
+import Contacts from './pages/Contacts/Contacts';
+import packagedJson from '../package.json';
 
 function App() {
   const history = createBrowserHistory();
@@ -23,7 +24,7 @@ function App() {
     <div className={hard ? "App old-effect": "App"}>
       <div class="screen">
         <div className="old-effect-switch" onClick={() => setHard(!hard)}>OLD EFFECT [{hard ? "X": " "}]</div>
-        <div className="version">v1.0.0</div>
+        <div className="version">v{packagedJson.version}</div>
         <Router history={history}>
           <Menu/>
           <div className="content">
