@@ -1,7 +1,7 @@
 import React from 'react';
-import './Note.css';
+import './style.css';
 
-function Note(props) {
+export default (props) => {
   return (
     <div className="Note">
         <div className="note-title-wrapper">
@@ -18,4 +18,3 @@ function Note(props) {
   );
 }
 
-export default Note;

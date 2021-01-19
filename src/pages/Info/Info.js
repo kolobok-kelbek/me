@@ -1,17 +1,8 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
-import './Info.css';
+import './style.css';
 
-function Row(props) {
-  return (
-    <tr>
-      <td>{props.name}:</td>
-      <td>{props.value}</td>
-    </tr>
-  );
-}
-
-function Info() {
+export default () => {
   const info = {
     "Full name": "Krasnoshchekov Ilia",
     "Nickname": "kolobok kelbek",
@@ -22,38 +13,34 @@ function Info() {
     "Github": "https://github.com/kolobok-kelbek"
   };
 
-  const rows = [];
-  for (let [name, value] of Object.entries(info)) {
-    rows.push(<Row name={name} value={value}/>);
-  }
-
   return (
     <div className="InfoPage">
       <div className="info">
         <table className="description-table">
           <tbody>
-            {rows}
+            {Object.entries(info).map(([name, value], index) => (
+              <tr key={index}>
+                <td>{name}:</td>
+                <td>{value}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
-        
-        <p>
-          <Typewriter className="description"
-            options={{
-              delay: 40
-            }}
-            onInit={(typewriter) => {
-              typewriter.typeString('Interested in backend development, programming languages, web architectures. ' +
-              'Like new technologies, but sympathetic to Legacy. In free time, develop one of pet projects or learn something new.')
-                .start();
-            }}
-          />
-        </p>
+
+        <Typewriter className="description"
+          options={{
+            delay: 40
+          }}
+          onInit={(typewriter) => {
+            typewriter.typeString('Interested in backend development, programming languages, web architectures. ' +
+            'Like new technologies, but sympathetic to Legacy. In free time, develop one of pet projects or learn something new.')
+              .start();
+          }}
+        />
       </div>
       <div className="avatar-block">
-          <img className="avatar" src={process.env.PUBLIC_URL + '/images/me.jpeg'}/>
-        </div>
+        <img className="avatar" src={process.env.PUBLIC_URL + '/images/me.jpeg'} alt="Avatar"/>
+      </div>
     </div>
   );
 }
-
-export default Info;

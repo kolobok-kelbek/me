@@ -1,7 +1,7 @@
 import React from 'react';
-import './SkillLevel.css';
+import './style.css';
 
-function SkillLevel(props) {
+export default (props) => {
 
     const points = props.points <= 10
         ? (props.points < 0 ? 0 : props.points)
@@ -21,4 +21,3 @@ function SkillLevel(props) {
     );
 }
 
-export default SkillLevel;
