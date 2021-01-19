@@ -20,7 +20,6 @@ export default () => {
     <div className={hard ? "App old-effect": "App"}>
       <div className="screen">
         <div className="old-effect-switch" onClick={() => setHard(!hard)}>OLD EFFECT [{hard ? "X": " "}]</div>
-        <div className="version">v{packagedJson.version}</div>
         <Router history={history}>
           <Menu/>
           <div className="content">
@@ -32,6 +31,7 @@ export default () => {
           </div>
         </Router>
       </div>
+      <div className="version">v{packagedJson.version}</div>
     </div>
   );
 }
